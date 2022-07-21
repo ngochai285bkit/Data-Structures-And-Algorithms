@@ -88,8 +88,16 @@ public class _912_Sort_An_Array {
         return nums;
     }
 
+    public static void sortArray1(int[] nums) {
+        int n = nums.length;
+        nums = mergeSort(nums, 0, n - 1);
+    }
+
     public static void main(String[] args) {
         int[] a = { 3, 2, 5, 7, 6, 9, 8, 1, 4 };
         System.out.println(Arrays.toString(sortArray(a)));
+        int[] b = { 2, 4, 3, 5, 7, 6, 8, 9 };
+        sortArray1(b);
+        System.out.println(Arrays.toString(b));
     }
 }
